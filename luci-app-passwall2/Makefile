@@ -69,7 +69,7 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_Brook
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_Hysteria
 	bool "Include Hysteria"
-	default n
+	default y
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_IPv6_Nat
 	depends on PACKAGE_ip6tables
@@ -79,7 +79,7 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_IPv6_Nat
 config PACKAGE_$(PKG_NAME)_INCLUDE_NaiveProxy
 	bool "Include NaiveProxy"
 	depends on !(arc||(arm&&TARGET_gemini)||armeb||mips||mips64||powerpc)
-	default n
+	default y
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_Shadowsocks_Libev_Client
 	bool "Include Shadowsocks Libev Client"
